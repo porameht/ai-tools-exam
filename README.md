@@ -98,3 +98,14 @@ fn main() {
 - เหมาะสำหรับการค้นหาในข้อมูลที่เรียงลำดับและใหญ่
 
 4. (25 คะแนน) จงสร้าง Web สำหรับ CRUD โดยใช้ AI ในการเขียน Code พร้อมทั้งใช้ Docker ให้ผู้ตรวจข้อสอบสามารถรันและใช้งานระบบได้
+
+1. Generate API Spec
+   ```
+   prompt: Generate API Spec for the following requirement:
+   ```
+
+   Result:
+   ```
+   
+   ```
+   Can test code this => `https://editor.swagger.io/`

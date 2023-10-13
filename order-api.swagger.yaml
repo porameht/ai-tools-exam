@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Order API
+  version: 1.0.0
+paths:
+  /orders:
+    get:
+      summary: Get all orders
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Create a new order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '201':
+          description: Created
+          headers:
+            Location:
+              schema:
+                type: string
+              description: URL of the created order
+    delete:
+      summary: Delete all orders
+      responses:
+        '204':
+          description: No Content
+  /orders/{orderId}:
+    get:
+      summary: Get an order by ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID of the order to retrieve
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
+    put:
+      summary: Update an order by ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID of the order to update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
+    delete:
+      summary: Delete an order by ID
+      parameters:
+        - name: orderId
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID of the order to delete
+      responses:
+        '204':
+          description: No Content
+        '404':
+          description: Not Found
+components:
+  schemas:
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        quantity:
+          type: integer
+        price:
+          type: number

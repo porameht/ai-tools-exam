@@ -105,5 +105,5 @@ fn main() {
    ```
    Result: Can test code this => `https://editor.swagger.io/`
 
-   this project CRUD generate => `https://github.com/porameht/rust-ai-generate-crud`
-   this conversetion history => `https://chat.openai.com/share/f52094ae-e32c-440b-a9e1-0da6b235e2b7`
+   this project CRUD generate => https://github.com/porameht/rust-ai-generate-crud
+   this conversetion history => https://chat.openai.com/share/f52094ae-e32c-440b-a9e1-0da6b235e2b7
